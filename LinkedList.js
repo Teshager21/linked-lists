@@ -22,29 +22,41 @@ class LinkedList {
     const node= new Node(value);
     this._head = node;
     this._tail = node;
-    console.log('settiiiiiing head',this._head,'and tail',this._tail)
     }
 
     get tail(){
         return this._tail;
     }
 
+    get length(){
+        return this._length;
+    }
+
     append(value){
-        console.log('apppending...tail',this._tail, 'head',this._head)
+        const node= new Node(value);
         if(this._head===null|| this._head===undefined){
-            const node= new Node(value);
             this._head= node;
             this._tail=node; 
         } 
         else {
-        const node=new Node(value);
-        this._tail.next= node;
-        this._tail= node;
+            this._tail.next= node;
+            this._tail= node;
         }
-        this.length+=1;
-        console.log('apppended...tail',this._tail, 'head',this._head)
+        this._length=this._length+1;
+        console.log('apppended...tail',this._tail, 'head',this._head,'len',this.length)
 
     }
+
+ prepend(value){
+    const node= new Node(value);
+    if(this._head===null|| this._head===undefined){
+        this._head= node;
+        this._tail=node; 
+    } else{
+        node.next=this._head;
+        this._head=node;
+    }  
+ }
 
 
 }
