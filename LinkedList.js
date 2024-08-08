@@ -28,6 +28,25 @@ class LinkedList {
     get tail(){
         return this._tail;
     }
+
+    append(value){
+        console.log('apppending...tail',this._tail, 'head',this._head)
+        if(this._head===null|| this._head===undefined){
+            const node= new Node(value);
+            this._head= node;
+            this._tail=node; 
+        } 
+        else {
+        const node=new Node(value);
+        this._tail.next= node;
+        this._tail= node;
+        }
+        this.length+=1;
+        console.log('apppended...tail',this._tail, 'head',this._head)
+
+    }
+
+
 }
 
 
