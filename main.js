@@ -1,3 +1,8 @@
 import LinkedList from "./LinkedList.js";
+let alphabet= new LinkedList();
+alphabet.head='a';
 
-console.log(LinkedList);
+alphabet.append("b");
+
+console.log('head',alphabet.head)
+console.log('tail',alphabet.tail)
