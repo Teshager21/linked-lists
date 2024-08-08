@@ -28,7 +28,6 @@ class LinkedList {
         return this._tail;
     }
 
-<<<<<<< HEAD
     get length(){
         return this._length;
     }
@@ -36,17 +35,10 @@ class LinkedList {
     append(value){
         const node= new Node(value);
         if(this._head===null|| this._head===undefined){
-=======
-    append(value){
-        console.log('apppending...tail',this._tail, 'head',this._head)
-        if(this._head===null|| this._head===undefined){
-            const node= new Node(value);
->>>>>>> af48baf5a7ef272f4a585d492c6918f253c2d98f
             this._head= node;
             this._tail=node; 
         } 
         else {
-<<<<<<< HEAD
             this._tail.next= node;
             this._tail= node;
         }
@@ -66,17 +58,6 @@ class LinkedList {
     }  
  }
 
-=======
-        const node=new Node(value);
-        this._head.next= node;
-        this._tail= node;
-        }
-        this.length+=1;
-        console.log('apppended...tail',this._tail, 'head',this._head)
-
-    }
-
->>>>>>> af48baf5a7ef272f4a585d492c6918f253c2d98f
 
 }
 
