@@ -11,7 +11,8 @@ class LinkedList {
     constuctor(){
         this.head=null;
         this.tail=null;
-        this.length=1;
+        this.size=0;
+      
     }
 
     get head(){
@@ -22,14 +23,15 @@ class LinkedList {
     const node= new Node(value);
     this._head = node;
     this._tail = node;
+    this._size=1;
     }
 
     get tail(){
         return this._tail;
     }
 
-    get length(){
-        return this._length;
+    get size(){
+        return this._size;
     }
 
     append(value){
@@ -37,13 +39,14 @@ class LinkedList {
         if(this._head===null|| this._head===undefined){
             this._head= node;
             this._tail=node; 
+            this._size=1;
         } 
         else {
             this._tail.next= node;
             this._tail= node;
+            this._size+=1;
         }
-        this._length=this._length+1;
-        console.log('apppended...tail',this._tail, 'head',this._head,'len',this.length)
+        console.log('apppended...tail',this._tail, 'head',this._head)
 
     }
 
@@ -51,12 +54,16 @@ class LinkedList {
     const node= new Node(value);
     if(this._head===null|| this._head===undefined){
         this._head= node;
-        this._tail=node; 
+        this._tail=node;
+        this._size=1; 
     } else{
         node.next=this._head;
         this._head=node;
+        this._size+=1;
     }  
  }
+
+
 
 
 }
