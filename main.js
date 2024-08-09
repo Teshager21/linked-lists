@@ -20,3 +20,4 @@ console.log(alphabet.contains('A'));
 console.log(alphabet.contains('c'));
 console.log(alphabet.contains('d'));
 console.log(alphabet.contains('e'));
+console.log(alphabet.find('c'));

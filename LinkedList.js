@@ -81,15 +81,18 @@ class LinkedList {
  }
 
  contains(value) {
+    return (this.find(value)!==null)? true : false;
+ }
+
+ find(value){
     let counter=0;
     const sizeOfList= this._size;
     while(counter<sizeOfList){
-        if(this.at(counter).value===value) return true;
+        if(this.at(counter).value===value) return counter;
         counter++;
     }
-    return false;
+    return null;
  }
-
 
 
 }
