@@ -46,7 +46,7 @@ class LinkedList {
             this._tail= node;
             this._size+=1;
         }
-        console.log('apppended...tail',this._tail, 'head',this._head)
+        // console.log('apppended...tail',this._tail, 'head',this._head)
 
     }
 
@@ -70,6 +70,14 @@ class LinkedList {
      counter++;
     }
     return currentNode;
+ }
+
+ pop(){
+    console.log(this._size-2)
+    const toBePoped= this._tail;
+    this.at(this._size-2).next=null;
+    this._size=this._size-1;
+    return toBePoped;
  }
 
 
