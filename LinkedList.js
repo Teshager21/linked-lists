@@ -80,6 +80,16 @@ class LinkedList {
     return toBePoped;
  }
 
+ contains(value) {
+    let counter=0;
+    const sizeOfList= this._size;
+    while(counter<sizeOfList){
+        if(this.at(counter).value===value) return true;
+        counter++;
+    }
+    return false;
+ }
+
 
 
 }
