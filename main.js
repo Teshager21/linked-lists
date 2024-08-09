@@ -1,26 +1,10 @@
 import LinkedList from "./LinkedList.js";
-let alphabet= new LinkedList();
-alphabet.head='a';
+const list = new LinkedList();
 
-alphabet.append("b");
-alphabet.append("c");
-alphabet.append("d");
-alphabet.prepend('A');
-
-// console.log('size',alphabet.size)
-
-// console.log('head',alphabet.head)
-// console.log('tail',alphabet.tail)
-// console.log(alphabet._size)
-// console.log('using attttttttttttttttt',alphabet.at(4));
-// console.log(alphabet.pop());
-// console.log(alphabet._size)
-//  console.log('using attttttttttttttttt',alphabet.at(4));
-// console.log(alphabet.contains('A'));
-// console.log(alphabet.contains('c'));
-// console.log(alphabet.contains('c'));
-// console.log(alphabet.contains('e'));
-//  console.log(alphabet.find('c'));
-// alphabet.insertAt("B",1)
-alphabet.removeAt(4);
-console.log(alphabet.toString())
+list.append("dog");
+list.append("cat");
+list.append("parrot");
+list.append("hamster");
+list.append("snake");
+list.append("turtle");
+console.log(list.toString());
