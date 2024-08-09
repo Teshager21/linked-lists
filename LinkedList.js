@@ -11,8 +11,7 @@ class LinkedList {
     constuctor(){
         this.head=null;
         this.tail=null;
-        this.size=0;
-      
+        this.size=0; 
     }
 
     get head(){
@@ -44,7 +43,7 @@ class LinkedList {
         else {
             this._tail.next= node;
             this._tail= node;
-            this._size+=1;
+            this._size++;
         }
         // console.log('apppended...tail',this._tail, 'head',this._head)
 
@@ -59,7 +58,7 @@ class LinkedList {
     } else{
         node.next=this._head;
         this._head=node;
-        this._size+=1;
+        this._size++;
     }  
  }
  at(index){
@@ -73,7 +72,6 @@ class LinkedList {
  }
 
  pop(){
-    console.log(this._size-2)
     const toBePoped= this._tail;
     this.at(this._size-2).next=null;
     this._size=this._size-1;
@@ -104,6 +102,18 @@ class LinkedList {
      counter++;
     }
     return to_string;
+ }
+
+ insertAt(value, index){
+ if(index>this._size) {
+    const error =new Error(`INDEX OUT OF RANGE : last index of list is ${this._size}`);
+    throw error;
+    return
+}
+ const node= new Node(value);
+ node.next= this.at(index);
+ (index>0)? this.at(index-1).next = node : this._head=node;
+ this._size++;
  }
 
 

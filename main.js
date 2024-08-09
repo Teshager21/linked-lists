@@ -13,12 +13,13 @@ alphabet.prepend('A');
 // console.log('tail',alphabet.tail)
 // console.log(alphabet._size)
 // console.log('using attttttttttttttttt',alphabet.at(4));
-// console.log(alphabet.pop());
+console.log(alphabet.pop());
 // console.log(alphabet._size)
 //  console.log('using attttttttttttttttt',alphabet.at(4));
 // console.log(alphabet.contains('A'));
 // console.log(alphabet.contains('c'));
-// console.log(alphabet.contains('d'));
+console.log(alphabet.contains('c'));
 // console.log(alphabet.contains('e'));
-// console.log(alphabet.find('c'));
+ console.log(alphabet.find('c'));
+alphabet.insertAt("B",1)
 console.log(alphabet.toString())
