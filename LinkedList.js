@@ -94,6 +94,18 @@ class LinkedList {
     return null;
  }
 
+ toString(){
+    let counter=0;
+    let to_string='';
+    const sizeOfList= this._size;
+    while(counter<sizeOfList){
+     if(counter===0) to_string=this.at(counter).value;
+     if(counter>0)to_string=to_string+"->"+this.at(counter).value;
+     counter++;
+    }
+    return to_string;
+ }
+
 
 }
 
