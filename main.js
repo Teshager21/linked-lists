@@ -7,7 +7,8 @@ alphabet.append("c");
 alphabet.append("d");
 alphabet.prepend('c');
 
-console.log('size',alphabet.size)
+// console.log('size',alphabet.size)
 
-console.log('head',alphabet.head)
-console.log('tail',alphabet.tail)
+// console.log('head',alphabet.head)
+// console.log('tail',alphabet.tail)
+console.log('using attttttttttttttttt',alphabet.at(4));

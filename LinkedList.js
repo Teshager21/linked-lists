@@ -62,7 +62,15 @@ class LinkedList {
         this._size+=1;
     }  
  }
-
+ at(index){
+    let counter=0;
+    let currentNode=this._head;
+    while (counter<index){
+     currentNode=currentNode.next;
+     counter++;
+    }
+    return currentNode;
+ }
 
 
 
