@@ -116,6 +116,16 @@ class LinkedList {
  this._size++;
  }
 
+ removeAt(index){
+    if(index>this._size) {
+        const error =new Error(`INDEX OUT OF RANGE : last index of list is ${this._size}`);
+        throw error;
+        return
+    }
+   (index!==0) ? this.at(index-1).next=this.at(index+1) : this._head=this.at(1);
+    this._size--; 
+ }
+
 
 }
 
